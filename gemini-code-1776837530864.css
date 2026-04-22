@@ -1,0 +1,120 @@
+/* গুগল থেকে সুন্দর বাংলা ফন্ট ইমপোর্ট করা হলো */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans Bengali', sans-serif;
+}
+
+body {
+    background-color: #f0f4f8; /* চোখের জন্য আরামদায়ক ব্যাকগ্রাউন্ড কালার */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* হেডার ডিজাইন */
+.header {
+    background-color: #1a365d; /* গাঢ় নীল রঙ, যা একটু প্রফেশনাল লুক দেয় */
+    color: white;
+    width: 100%;
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.header p {
+    font-size: 15px;
+    color: #cbd5e1;
+}
+
+/* কুইজ বক্সের ডিজাইন */
+.quiz-container {
+    background-color: white;
+    width: 90%;
+    max-width: 600px;
+    margin: 50px auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    padding: 35px 30px;
+}
+
+.quiz-header h2 {
+    font-size: 22px;
+    margin-bottom: 30px;
+    color: #2d3748;
+    line-height: 1.5;
+}
+
+/* অপশন বাটনের ডিজাইন */
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.option-btn {
+    background-color: #f8fafc;
+    border: 2px solid #e2e8f0;
+    padding: 16px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #4a5568;
+}
+
+/* মাউস নিলে বাটনের পরিবর্তন */
+.option-btn:hover {
+    background-color: #e2e8f0;
+    border-color: #cbd5e1;
+}
+
+/* সিলেক্ট হওয়া অবস্থার জন্য একটি ক্লাস (পরে জাভাস্ক্রিপ্টে কাজে লাগবে) */
+.option-btn.selected {
+    background-color: #ebf8ff;
+    border-color: #3182ce;
+    color: #2b6cb0;
+    font-weight: 600;
+}
+
+/* পরবর্তী বাটনের ডিজাইন */
+.submit-btn {
+    background-color: #38a169; /* সবুজ রঙ */
+    color: white;
+    border: none;
+    padding: 16px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #2f855a;
+}
+
+/* মোবাইল ফোনের জন্য রেসপনসিভ ডিজাইন */
+@media (max-width: 600px) {
+    .quiz-container {
+        padding: 25px 20px;
+        margin: 30px auto;
+    }
+    
+    .header h1 {
+        font-size: 24px;
+    }
+}
