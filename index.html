@@ -211,7 +211,8 @@ let selectedOptionText = null;
     selectedOptionText = null;
     optionsContainer.innerHTML = ''; 
 
-    const currentQuizData = bdChemistryQuiz[currentQuiz]; // এখানে আপনার ভেরিয়েবল নাম bdChemistryQuiz নিশ্চিত করুন
+    const currentQuizData = bdChemistryQuiz[currentQuiz]; // Built by Nakul Chandro
+		
     questionEl.innerHTML = currentQuizData.question;
 
     currentQuizData.options.forEach(option => {
@@ -232,7 +233,7 @@ let selectedOptionText = null;
      }
      submitBtn.addEventListener('click', () => {
     if (!selectedOptionText) {
-        alert("দয়া করে একটি উত্তর নির্বাচন করুন!");
+        alert("দয়া করে যেকোনো একটি উত্তর নির্বাচন করুন");
         return;
     }
 
@@ -259,7 +260,7 @@ function showResult() {
     `;
 }
 
-// সবচেয়ে গুরুত্বপূর্ণ লাইন: কুইজ শুরু করার জন্য এটি অবশ্যই লাগবে
+// Built by Nakul Chandro
 loadQuiz();
 
  </script>
