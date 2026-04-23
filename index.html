@@ -187,7 +187,7 @@
 	{
 	id: 24,
 	question: "24. সোডিয়াম থায়োসালফেটের (Na2S2O3) জলীয় দ্রবণে আয়োডিন যোগ করলে নিচের কোনটি উৎপন্ন হয়?",
-	options: ["document.getElementById('opt1').innerHTML = "SO<sub>2</sub>";", "Na2SO4", "NaI", " Na2S4O6"],
+	options: ["SO<sub>2</sub>", "Na2SO4", "NaI", " Na2S4O6"],
 	answer: "Na2S4O6",
 	note: "আয়োডিন ও সোডিয়াম থায়োসালফেটের বিক্রিয়ায় সোডিয়াম টেট্রাথায়োনেট এবং সোডিয়াম আয়োডাইড উৎপন্ন হয়।"
 	},
@@ -212,17 +212,17 @@ let selectedOptionText = null;
     optionsContainer.innerHTML = ''; 
 
     const currentQuizData = bdChemistryQuiz[currentQuiz]; // এখানে আপনার ভেরিয়েবল নাম bdChemistryQuiz নিশ্চিত করুন
-    questionEl.innerText = currentQuizData.question;
+    questionEl.innerHTML = currentQuizData.question;
 
     currentQuizData.options.forEach(option => {
         const button = document.createElement('button');
-        button.innerText = option;
+        button.innerHTML = option;
         button.classList.add('option-btn');
         
         button.addEventListener('click', (e) => {
             document.querySelectorAll('.option-btn').forEach(btn => btn.classList.remove('selected'));
             e.target.classList.add('selected');
-            selectedOptionText = e.target.innerText;
+            selectedOptionText = e.target.innerHTML;
         });
 
         optionsContainer.appendChild(button);
